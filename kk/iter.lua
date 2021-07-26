@@ -74,9 +74,9 @@ end
 
 -- https://stackoverflow.com/questions/22724092/difference-between-stateful-and-stateless-iterators-in-lua
 function M.values(s)
-	local f, _, var = pairs(s)
+	local next, _, var = pairs(s)
 	return function()
-		local i, v = f(s, var)
+		local i, v = next(s, var)
 		var = i
 		return v
 	end
