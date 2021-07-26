@@ -115,8 +115,4 @@ function M.length(iterator)
 	return count
 end
 
-function M.hello()
-	print("hello")
-end
-
 return M
